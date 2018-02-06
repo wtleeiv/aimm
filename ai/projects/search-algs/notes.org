@@ -1,0 +1,65 @@
+_n^2-1 puzzle_ (n=3)
+
+0: empty tile
+final (goal) state: 0,1, ... ,n-1
+  0,1,2
+  3,4,5
+  6,7,8
+search order: U,D,L,R
+total cost: num moves
+
+* search algorithm review
+** algorithms implemented
+- breadth-first search (bfs)
+- depth-first search (dfs)
+- A* search (ast)
+** steps
+1. remove node from frontier set
+2. check state against goal state
+2a. if solution, break
+3. *expand* node
+3a. generate successor nodes
+3b. add to frontier (if not prev. visited or w/in frontier)
+
+note: don't short-circuit expanded nodes for goal satisfaction
+- grader program requires this
+- bfs & dfs have *one* correct search order given specs
+
+* reqs
+- parser
+- searcher
+-- game state
+-- frontier 
+--- bfs: queue (U,D,L,R -> U,D,L,R)
+--- dfs: stack (R,L,D,U -> U,D,L,R)
+--- a*: priority queue (no strict order)
+---- manhattan priority fn: sum tile_dists from goal_pos
+----- don't sum empty (0) tile
+---- deal w/ duplicate keys
+---- how ensure proper retrieval order?
+-- prev. state memory (dynamic programming)
+- stats reporter
+-- path: steps (ex. U, L, L)
+-- cost: n steps
+-- n nodes expanded: during search
+-- goal depth
+-- max search depth
+-- run time
+-- max ram usage: resource.ru_maxrss module
+
+* guidelines
+- +10 pts for fast code
+-- all 15 tests < 10 mins
+- don't worry about malformed input
+-- simple parser
+- batch test algs
+-- plot time & space reqs vs complexity
+-- improve algs :)
+
+* formatting
+path
+- brackets
+- single quotes
+- capitalize first letter
+floats
+- round 8 decimal places

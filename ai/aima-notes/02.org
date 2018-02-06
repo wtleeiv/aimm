@@ -1,0 +1,138 @@
+_Intellligent Agents_
+
+rational agent: behave as well as possible
+* agent/env
+agents: io w/ env
+- sensors
+-- percepts, percept sequences/streams
+- actuators
+agent function: map percepts to actions
+- processing: i -> o
+- external viewpoint (black box)
+agent program: internal representation
+* rationality (good behavior)
+what does it mean to act rationally? do the right thing?
+- consider consequences of behavior
+*performance measure* eval seq of env states
+- objective, not subjective (independent of agent)
+design performance measure:
+- based on desired *outcome* (why)
+- not perceived rational *behavior* (how)
+** rationality
+depencence:
+1. performance metric (what is good?)
+2. prior env knowledge (what do I know?)
+3. action repitoire (what can I do?)
+4. percept sequence (what have I experienced?)
++ are 2 and 4 tied
+-- 4 updates 2 (learning)
+*rational agent*: select action to max performance metric,
+given percept seq and prior knowledge
+** omniscience
+rationality: not everything known
+information gathering: actions to inc perception
+- do stuff to then make more informed decisions
+exploration: gain info on unfamiliar env
+*autonomy*: ability to learn from env on own
+- not dependent on a priori knowledge from programmer
+in practice: dependent on a priori knowledge at first
+learn over time -> fully autonomous
+full autonomy at first: act randomly until learn stuff
+- ex. randomly weighted neural net at first training
+** task environments
+fully/partially observable
+- entire state known at all times or nah
+- unobservable environment possible
+single/multi agent
+competitive/cooperative
+- chess(comp) vs driving (both)
+communication
+randomized behavior
+- combat predictability
+deterministic/stochastic
+- actions affect env deterministically or nah
+- stochastic: probabilistic
+- nondeterministic: random
+uncertain: not fully observable and not deterministic
+episodic/sequential
+- sequential: past & future relevant
+static/dynamic
+- env change during deliberation
+- semidynamic: env no change, perf measure change
+-- time chess
+continuous/discrete
+- chess: disc
+- driving: cont
+known/unknown
+- env laws (of physics, etc)
+* agent structure
+agent: architecture = program
+- hardware + software
+agent program: takes *current* state as input
+agent function: takes *all previous* state as input
+agent must remember percepts
+exhaustive table-based solution intractable
+- design agent w/in feasibility (limited resources)
+four basic kinds of agents
+1. simple reflex
+2. model-based reflex
+3. goal-based
+4. utility-based
+** simple-reflex agents
+episodic
+condition-action
+- if x -> y
+** model-based
+remember state not currently perceived
+- internal state: dep on percept history
+update internal state (model) based on env knowledge when percepts unavailable
+- env knowledge: how the 'supposedly' world works
+** goal-based
+considers future
+- what will happen if I do x?
+reason based on internal model and predicted goal-satisfaction
+- more flexible than reflexes
+** utility-based
+goals are binary, utility is continuous
+- how happy am I?
+utility function: internal performance metric
+- maximize expected utility given actions
+
+** learning agents
+performance element: determine actions
+learning element: improve decision-making
+- feedback from critic -> change decision-making
+problem generator: what experience will help me grow best?
+- explore new territory
+** representation
+*** atomic (atoms)
+states are indivisible
+no internal structure
+- black boxes
+ex: search, game-playing, markov models/decision processes
+*** factored (features)
+states have variables/attributes
+ex: constraint satisfaction, propositional logic, planning,
+bayesian networks, machine learning algorithms
+*** structured (relations)
+relations between features
+ex: relational databases, first-order logic/probability models,
+knowledge-based learning, natural language understanding
+
+
+* reflections
+what do you really want?
+- nobel prize, potentially after the fact nah
+what is best?
+- roller-coaster highs & lows
+- sustained mediocrity
+PEAS
+- performance
+- environment
+- actuators
+- sensors
+self/other
+input/output
+every program is io
+ai is basically just a more complex self,
+capable of interfacing w/ more complex envs

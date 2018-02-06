@@ -1,0 +1,125 @@
+* intro
+** ai disciplines
+*** intelligence
+1. natural language processing (i/o)
+   communicate in human language
+2. knowledge representation
+   store/remember sensory input
+3. automated reasoning
+   answer questions, draw conclusions
+4. machine learning
+   adapt, extrapolate new patterns
+*** physical I/O
+1. computer vision
+   perceive reality (input)
+2. robotics
+   manipulate reality (output)
+
+** airplane vs bird
+don't think of ai as emulating/modeling humanity
+** cognitive science
+1. introspection
+2. physical observation
+3. brain scans
+** logic
+codifying logic (prolog, etc)
+useful in some situations
+computationally costly at scale
+non-transferable across domains (vision, etc)
+- inflexible
+** rational agency
+agent: do stuff
+rational agent: act to achieve best outcome, or best expected outcome (probabilistic)
+perfect rationality infeasible in complex settings
+- godel's incompleteness
+limited rationality: acting w/ incomplete info/processing time
+* foundations
+** philosophy
+Hobbes: mechanical animal
+empiricism: understanding via sensory data
+induction: relations extablished via observing repeated correlations
+logical positivism: empirical induction
+- knowledge constructed from logical relations between concepts,
+  constructed from sensory input
+aristotole: consider means not ends
+- your goal is x, how to get to x
+- wishful thinking programming
+- regression planning system (ai thing)
+** mathematics
+1. logic
+   incompleteness
+2. computation
+   intractability (polynomial vs exponential)
+3. probability
+Bayes: *update* probabilities w/ new info
+** economics
+1. max payoff
+2. adversaries (prisoner's dilemma)
+3. timescale considerations
+utility: preferred outcome
+decision theory: macro-econ
+- unambiguous
+game theory: micro-econ
+- sometimes ambiguous
+operations: sequential action
+- markov decision process
+satisficing: "good-enough" decisions
+- comparable to human nature
+** neuroscience
+** psycology
+founder: helmholtz (physics guy, optics/vision research)
+perception: involves unconscious logical inference
+- higher-order features
+beliefs/goals ~ pressure/temperature
+- emergent qualities of underlying principles
+cogition *mental reality model* (Craik)
+1. translate sensory input into mental concept model
+2. computational concept manipulation w/in mental framework
+3. translate outcome/decision into action
+** computer engineering
+thermodymanic concerns (heat dissapation)
+- speed -> parallel (akin to brain)
+** control theory & cybernetics
+self-regulation, feedback
+** linguistics
+chomsky: lingual creativity
+- create unheard sentences
+- formal enough -> programmabl
+* history
+hebbian learning: update neuronal weights over time
+turing's child program
+- don't simulate adult mind
+- simulate a child's
+-- build env for learning
+power players: mit, carnigie mellon, stanford
+symbolic manipulation: heavy early days
+- shown to be lacking since
+computational cost of explicit logic representation and manipulation
+dendral: mass spec -> chemical identity
+- knowledge-based
+separate rules from reasoning
+neural nets
+- connections vs symbols vs logic
+embrace diverse influences & scientific method
+- neat vs scruffy (lol)
+hidden markov model
+- mathematical framework
+- sequence based, like info theory
+- good for nlp
+bayesian network
+- formalism
+- represent and reason w/ uncertainty
+- mix classical ai and neural nets
+human-level ai (HLAI), artificial general intelligence (AGI)
+knowledge bottleneck: hella data better than optimal algorithm
+* current capabilities
+driving/robots
+speech/translation
+planning mars missions
+chess/go
+spam filters
+* summary
+thinking vs behavior
+human vs ideal
+rational agent: ideal behavior (in theory)
+
