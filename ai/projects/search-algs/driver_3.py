@@ -1,7 +1,7 @@
 from sys import argv
 from math import sqrt, modf
 from enum import Enum
-from collections import namedtuple
+from collections import namedtuple, deque
 
 Loc = namedtuple('Loc', 'row col')
 
@@ -44,24 +44,27 @@ class Board:
     def can_move(self, move):
         return Board.POSSIBLE_MOVE[move](self)
 
-class search_alg:
-    pass
+class Bfs:
+    def __init__(self):
+        # queue
+        self.frontier = deque()
+        self.alg = 'bfs'
 
-def bfs():
-    return 'bfs'
-def dfs():
-    return 'dfs'
-def ast():
-    return 'ast'
+class Dfs:
+    def __init__(self):
+        # stack
+        self.frontier = []
+        self.alg = 'dfs'
 
-ALG_DICT = {'bfs':bfs, 'dfs':dfs, 'ast':ast}
+class Ast:
+    def __init__(self):
+        self.alg = 'ast'
+
+Alg_Dict = {'bfs':Bfs, 'dfs':Dfs, 'ast':Ast}
 
 def main(alg_str, board_str):
-    a =  ALG_DICT[alg_str]()
+    a = Alg_Dict[alg_str]()
     b = Board(board_str)
-    print(a)
-    print(b.empty_loc)
-    print(Move.Down.name)
 
 if __name__ == '__main__':
     main(argv[1], argv[2])
