@@ -1,0 +1,15 @@
+_Search_
+
+find solution sequence
+
+problem-solving agent:
+- goal bassed
+- atomic reps
+-- planning agents: factored/structured reps
+solution is a fixed sequence of actions
+
+* problem-solving agents
+goal-formulation: important
+problem-formulation: level of task detail
+examine future states -> eventually reach goal
+search algorithm: return action sequence
